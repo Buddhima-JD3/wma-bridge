@@ -180,10 +180,8 @@ Use this API to initiate the payment flow via this callback.
 import { my } from 'wma-bridge'
 
     const data = {
-          data.orderId = 'orderId';
-          data.currencyCode = 'currencyCode';
-          data.amount = 'amount',
-          data.token = 'token';
+          data.transactionId = 'transactionId',
+          data.accessToken = 'accessToken'
         };
 
     my.getTradePay(data, {
@@ -199,10 +197,10 @@ import { my } from 'wma-bridge'
 
 | Property | Type     | Required | Description |
 |----------|----------|:----------:| ----------|
-|   orderId |   String |   Y | Merchant Generated OrderId  |
-|   currencyCode|   String |  N | Currency Code  |
-|   amount|   String |  Y | Total Transaction Amount |
-|   token|   String |  Y |  The Token Which is Granted from Authorization Server |
+|   transactionId |   String |   Y | Transaction ID Generated from Merchent  |
+|   accessToken|   String |  Y | The Token Which is Granted from Authorization Server  |
+<!-- |   amount|   String |  Y | Total Transaction Amount |
+|   token|   String |  Y |  The Token Which is Granted from Authorization Server | -->
 
 ### 3.4 syncTradePayData
 
